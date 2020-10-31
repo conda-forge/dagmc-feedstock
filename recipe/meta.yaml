@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: True  # [win]
 
 requirements:
@@ -36,8 +36,7 @@ test:
 
 about:
   home: https://svalinn.github.io/DAGMC/
-  license: BSD 2-Clause
-  license_family: BSD
+  license: BSD-2-Clause
   license_file: LICENSE.txt
   summary: 'Direct Accelerated Geometry Toolkit'
 
