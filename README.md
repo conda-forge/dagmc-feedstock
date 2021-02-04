@@ -27,31 +27,17 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7</td>
+              <td>linux_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version7cxx_compiler_version7fortran_compiler_version7" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=master&jobName=linux&configuration=linux_64_" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9</td>
+              <td>osx_64</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=master&jobName=linux&configuration=linux_64_c_compiler_version9cxx_compiler_version9fortran_compiler_version9" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fortran_compiler_version7</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=master&jobName=osx&configuration=osx_64_fortran_compiler_version7" alt="variant">
-                </a>
-              </td>
-            </tr><tr>
-              <td>osx_64_fortran_compiler_version9</td>
-              <td>
-                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=master">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=master&jobName=osx&configuration=osx_64_fortran_compiler_version9" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=master&jobName=osx&configuration=osx_64_" alt="variant">
                 </a>
               </td>
             </tr>
@@ -160,4 +146,5 @@ Feedstock Maintainers
 * [@ljacobson64](https://github.com/ljacobson64/)
 * [@ngranda](https://github.com/ngranda/)
 * [@pshriwise](https://github.com/pshriwise/)
+* [@shimwell](https://github.com/shimwell/)
 
