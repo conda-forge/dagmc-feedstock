@@ -25,6 +25,7 @@ requirements:
     - moab 5.*
     - libblas
     - liblapack
+    - eigen
   run:
     - hdf5
     - moab 5.*
