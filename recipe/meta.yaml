@@ -1,17 +1,17 @@
 {% set name = "dagmc" %}
-{% set version = "3.2" %}
-{% set sha256 = "becd61148aa4f9a3a312eb69e33d01779797007cc13715d60bb650ad5e71b183" %}
+{% set version = "3.2.0" %}
+{% set sha256 = "1438179e9d1c0807af4fbabc63efda45b1c995e2e568450bc6ae5ca35b18ca8f" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/svalinn/DAGMC/archive/v{{ version }}-rc.tar.gz
+  url: https://github.com/svalinn/DAGMC/archive/{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: True  # [win]
 
 requirements:
@@ -19,12 +19,10 @@ requirements:
     - cmake
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - {{ compiler("fortran") }}
   host:
     - hdf5
     - moab 5.*
-    - libblas
-    - liblapack
+    - eigen
   run:
     - hdf5
     - moab 5.*
@@ -48,3 +46,4 @@ extra:
     - kkiesling
     - bam241
     - ngranda
+    - shimwell
