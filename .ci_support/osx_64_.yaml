@@ -12,16 +12,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '11'
-fortran_compiler:
-- gfortran
-fortran_compiler_version:
-- '9'
 hdf5:
-- 1.10.6
-libblas:
-- 3.8 *netlib
-liblapack:
-- 3.8 *netlib
+- 1.12.1
 macos_machine:
 - x86_64-apple-darwin13.4.0
 target_platform:
@@ -29,4 +21,3 @@ target_platform:
 zip_keys:
 - - c_compiler_version
   - cxx_compiler_version
-  - fortran_compiler_version
