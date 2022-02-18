@@ -20,9 +20,11 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - hdf5 >=1.12.0
     - moab 5.*
     - eigen
   run:
+    - hdf5 >=1.12.0
     - moab 5.*
     - zlib
 
