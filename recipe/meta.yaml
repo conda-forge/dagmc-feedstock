@@ -1,42 +1,51 @@
 {% set name = "dagmc" %}
 {% set version = "3.2.1" %}
-{% set sha256 = "2cd2683fbcb4ae30eed2393741e320c7b1403e9a80d1af6306c2042a06775801" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/svalinn/DAGMC/archive/v{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_url: https://github.com/svalinn/DAGMC.git
+  git_rev: v3.2.1
+  git_depth: 1 # (Defaults to -1/not shallow)
+
 
 build:
   number: 0
-  skip: true  # [win]
+  skip: True  # [win]
 
 requirements:
   build:
     - cmake
+    - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
-    - hdf5
-    - moab 5.*
     - eigen
+    - libnetcdf >=4.7.4
+    - hdf5 >=1.12.1
+    - moab 5.3.1
   run:
-    - hdf5
-    - moab 5.*
+    - libnetcdf >=4.7.4
+    - hdf5 >=1.12.1
+    - moab 5.3.1
     - zlib
 
 test:
-  commands:
-    - make_watertight --help
+   commands:
+     - make_watertight --help
 
 about:
   home: https://svalinn.github.io/DAGMC/
   license: BSD-2-Clause
   license_file: LICENSE.txt
-  summary: Direct Accelerated Geometry Toolkit
+  summary: 'Direct Accelerated Geometry Toolkit'
+  description: |
+    Direct Accelerated Geometry Monte Carlo (DAGMC) is a software package that
+    allows users to perform Monte Carlo radiation transport directly on CAD
+    models.
+  dev_url: https://github.com/svalinn/DAGMC
 
 extra:
   recipe-maintainers:
