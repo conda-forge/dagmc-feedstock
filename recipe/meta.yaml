@@ -1,18 +1,18 @@
 {% set name = "dagmc" %}
-{% set version = "3.2.0" %}
-{% set sha256 = "1438179e9d1c0807af4fbabc63efda45b1c995e2e568450bc6ae5ca35b18ca8f" %}
+{% set version = "3.2.1" %}
+{% set sha256 = "2cd2683fbcb4ae30eed2393741e320c7b1403e9a80d1af6306c2042a06775801" %}
 
 package:
   name: {{ name }}
   version: {{ version }}
 
 source:
-  url: https://github.com/svalinn/DAGMC/archive/{{ version }}.tar.gz
+  url: https://github.com/svalinn/DAGMC/archive/v{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   number: 0
-  skip: True  # [win]
+  skip: true  # [win]
 
 requirements:
   build:
@@ -29,14 +29,14 @@ requirements:
     - zlib
 
 test:
-   commands:
-     - make_watertight --help
+  commands:
+    - make_watertight --help
 
 about:
   home: https://svalinn.github.io/DAGMC/
   license: BSD-2-Clause
   license_file: LICENSE.txt
-  summary: 'Direct Accelerated Geometry Toolkit'
+  summary: Direct Accelerated Geometry Toolkit
 
 extra:
   recipe-maintainers:
