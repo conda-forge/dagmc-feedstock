@@ -40,6 +40,11 @@ about:
   license: BSD-2-Clause
   license_file: LICENSE.txt
   summary: 'Direct Accelerated Geometry Toolkit'
+  description: |
+    Direct Accelerated Geometry Monte Carlo (DAGMC) is a software package that
+    allows users to perform Monte Carlo radiation transport directly on CAD
+    models.
+  dev_url: https://github.com/svalinn/DAGMC
 
 extra:
   recipe-maintainers:
