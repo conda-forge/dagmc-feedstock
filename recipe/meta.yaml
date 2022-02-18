@@ -1,6 +1,6 @@
 {% set name = "dagmc" %}
-{% set version = "3.2.0" %}
-{% set sha256 = "1438179e9d1c0807af4fbabc63efda45b1c995e2e568450bc6ae5ca35b18ca8f" %}
+{% set version = "3.2.1" %}
+{% set sha256 = "2cd2683fbcb4ae30eed2393741e320c7b1403e9a80d1af6306c2042a06775801" %}
 
 package:
   name: {{ name }}
@@ -21,11 +21,11 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - hdf5
-    - moab 5.*
+    - moab 5.3.1
     - eigen
   run:
     - hdf5
-    - moab 5.*
+    - moab 5.3.1
     - zlib
 
 test:
