@@ -21,6 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
   host:
+    - eigen
     - libnetcdf >=4.7.4
     - hdf5 >=1.12.1
     - moab 5.3.1
