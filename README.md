@@ -9,6 +9,13 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/dagmc-feedstock
 
 Summary: Direct Accelerated Geometry Toolkit
 
+Development: https://github.com/svalinn/DAGMC
+
+Direct Accelerated Geometry Monte Carlo (DAGMC) is a software package that
+allows users to perform Monte Carlo radiation transport directly on CAD
+models.
+
+
 Current build status
 ====================
 
