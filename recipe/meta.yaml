@@ -25,7 +25,7 @@ requirements:
     - eigen
     - libnetcdf >=4.7.4
     - hdf5 >=1.12.1
-    - moab * nompi * notempest * 5.3.1
+    - moab * 5.3.1 * nompi * notempest
   run:
     - libnetcdf >=4.7.4
     - hdf5 >=1.12.1
