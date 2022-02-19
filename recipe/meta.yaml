@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/svalinn/DAGMC.git
-  git_rev: v3.2.1
+  git_rev: v{{ version }}
   git_depth: 1 # (Defaults to -1/not shallow)
 
 
@@ -23,13 +23,13 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - eigen
-    - libnetcdf >=4.7.4
+    - libnetcdf
     - hdf5 >=1.12.1
-    - moab * 5.3.1 * nompi * notempest
+    - moab 5.3.1 * nompi_notempest_*
   run:
-    - libnetcdf >=4.7.4
+    - libnetcdf
     - hdf5 >=1.12.1
-    - moab 5.3.1
+    - moab 5.3.1 * nompi_notempest_*
     - zlib
 
 test:
