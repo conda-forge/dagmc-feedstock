@@ -23,13 +23,9 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - eigen
-    - libnetcdf
-    - hdf5 >=1.12.1
-    - moab 5.3.1 * nompi_notempest_*
+    - moab 5.3.1 * nompi_*
   run:
-    - libnetcdf
-    - hdf5 >=1.12.1
-    - moab 5.3.1 * nompi_notempest_*
+    - moab 5.3.1 * nompi_*
     - zlib
 
 test:
