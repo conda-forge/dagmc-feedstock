@@ -23,9 +23,9 @@ requirements:
     - {{ compiler('cxx') }}
   host:
     - eigen
-    - moab 5.3.1 * nompi_*
+    - moab 5.3.1 * nompi_tempest*
   run:
-    - moab 5.3.1 * nompi_*
+    - moab 5.3.1 * nompi_tempest*
     - zlib
 
 test:
