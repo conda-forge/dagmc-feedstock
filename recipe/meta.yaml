@@ -12,7 +12,7 @@ source:
 
 
 build:
-  number: 1
+  number: 2
   skip: True  # [win]
 
 requirements:
@@ -25,6 +25,7 @@ requirements:
     - eigen
     - moab * nompi_tempest*
   run:
+    - eigen
     - moab * nompi_tempest*
     - zlib
 
