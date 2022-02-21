@@ -30,11 +30,8 @@ requirements:
     - zlib
 
 test:
-  requires:
-    - make
    commands:
      - make_watertight --help
-     - make test
 
 about:
   home: https://svalinn.github.io/DAGMC/
