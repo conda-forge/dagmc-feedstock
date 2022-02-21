@@ -25,6 +25,7 @@ requirements:
     - eigen
     - moab * nompi_tempest*
   run:
+    - make
     - eigen
     - moab * nompi_tempest*
     - zlib
