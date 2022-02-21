@@ -31,6 +31,7 @@ requirements:
 test:
    commands:
      - make_watertight --help
+     - test -f "${PREFIX}/bin/make_watertight"
 
 about:
   home: https://svalinn.github.io/DAGMC/
