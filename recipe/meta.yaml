@@ -12,7 +12,26 @@ source:
 
 
 build:
-  number: 4
+  number: 5
+
+  # add build string so packages can depend on
+  # mpi or nompi variants explicitly:
+  # `dagmc * mpi_mpich_*` for mpich
+  # `dagmc * mpi_openmpi_*` for any openmpi
+  # `dagmc * nompi_*` for no mpi
+
+  {% if mpi != 'nompi' %}
+  {% set mpi_prefix = "mpi_" + mpi %}
+  {% else %}
+  {% set mpi_prefix = "nompi" %}
+  {% endif %}
+  string: {{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
+
+  {% if mpi != 'nompi' %}
+  run_exports:
+    - {{ name }} * {{ mpi_prefix }}_*
+  {% endif %}
+
   skip: True  # [win]
 
 requirements:
@@ -21,13 +40,18 @@ requirements:
     - make
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - {{ mpi }}  # [mpi != 'nompi']
   host:
     - eigen
-    - moab * nompi_tempest*
+    - moab * nompi_tempest*  # [mpi == 'nompi']
+    - moab * {{ mpi_prefix }}_tempest*  # [mpi != 'nompi']
+    - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
-    - moab * nompi_tempest*
+    - moab * nompi_tempest*  # [mpi == 'nompi']
+    - moab * {{ mpi_prefix }}_tempest*  # [mpi != 'nompi']
     - zlib
+    - {{ mpi }}  # [mpi != 'nompi']
 
 test:
    commands:
