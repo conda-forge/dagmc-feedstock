@@ -17,7 +17,7 @@ build:
   # add build string so packages can depend on
   # mpi or nompi variants explicitly:
   # `dagmc * mpi_mpich_*` for mpich
-  # `dagmc * mpi_openmpi_*` for any openmpi
+  # `dagmc * mpi_openmpi_*` for ßopenmpi
   # `dagmc * nompi_*` for no mpi
 
   {% if mpi != 'nompi' %}
@@ -25,7 +25,7 @@ build:
   {% else %}
   {% set mpi_prefix = "nompi" %}
   {% endif %}
-  string: {{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
+  string: {{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}
 
   {% if mpi != 'nompi' %}
   run_exports:
