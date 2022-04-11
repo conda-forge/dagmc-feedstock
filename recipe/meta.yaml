@@ -17,7 +17,7 @@ build:
   # add build string so packages can depend on
   # mpi or nompi variants explicitly:
   # `dagmc * mpi_mpich_*` for mpich
-  # `dagmc * mpi_openmpi_*` for ßopenmpi
+  # `dagmc * mpi_openmpi_*` for openmpi
   # `dagmc * nompi_*` for no mpi
 
   {% if mpi != 'nompi' %}
