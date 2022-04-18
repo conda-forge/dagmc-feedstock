@@ -4,6 +4,12 @@
 # default options from
 # https://github.com/svalinn/DAGMC/blob/develop/cmake/DAGMC_macros.cmake
 
+export CONFIGURE_ARGS=""
+
+if [[ "$mpi" != "nompi" ]]; then
+  export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_C_COMPILER=mpicc ${CONFIGURE_ARGS}"
+fi
+
 cmake -DBUILD_MCNP5=OFF \
       -DBUILD_MCNP6=OFF \
       -DBUILD_MCNP_PLOT=OFF \
@@ -27,7 +33,8 @@ cmake -DBUILD_MCNP5=OFF \
       -DBUILD_RPATH=ON \
       -DOUBLE_DOWN=OFF \
       -DMOAB_DIR="${PREFIX}" \
-      -DCMAKE_INSTALL_PREFIX="${PREFIX}"
+      -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+      ${CONFIGURE_ARGS}
 make -j "${CPU_COUNT}"
 make install
 make test
