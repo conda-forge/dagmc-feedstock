@@ -1,5 +1,14 @@
 {% set name = "dagmc" %}
 {% set version = "3.2.1" %}
+{% set build = 6 %}
+
+# ensure mpi is defined (needed for conda-smithy recipe-lint)
+{% set mpi = mpi or 'nompi' %}
+
+{% if mpi == 'nompi' %}
+# prioritize nompi variant via build number
+{% set build = build + 100 %}
+{% endif %}
 
 package:
   name: {{ name }}
@@ -11,7 +20,7 @@ source:
 
 
 build:
-  number: 5
+  number: {{ build }}
 
   # add build string so packages can depend on
   # mpi or nompi variants explicitly:
@@ -42,13 +51,11 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
   host:
     - eigen
-    - moab * nompi_tempest*  # [mpi == 'nompi']
-    - moab * {{ mpi_prefix }}_tempest*  # [mpi != 'nompi']
+    - moab * {{ mpi_prefix }}_tempest*
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
-    - moab * nompi_tempest*  # [mpi == 'nompi']
-    - moab * {{ mpi_prefix }}_tempest*  # [mpi != 'nompi']
+    - moab * {{ mpi_prefix }}_tempest*
     - zlib
     - {{ mpi }}  # [mpi != 'nompi']
 
