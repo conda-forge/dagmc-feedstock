@@ -33,7 +33,7 @@ build:
   {% else %}
   {% set mpi_prefix = "nompi" %}
   {% endif %}
-  string: {{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}
+  string: {{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
 
   {% if mpi != 'nompi' %}
   run_exports:
