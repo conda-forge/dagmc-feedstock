@@ -1,6 +1,6 @@
 {% set name = "dagmc" %}
 {% set version = "3.2.1" %}
-{% set build = 7 %}
+{% set build = 8 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -51,11 +51,11 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
   host:
     - eigen
-    - moab * {{ mpi_prefix }}_tempest*
+    - moab * {{ mpi_prefix }}_tempest_*
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
-    - moab * {{ mpi_prefix }}_tempest*
+    - moab * {{ mpi_prefix }}_tempest_*
     - zlib
     - {{ mpi }}  # [mpi != 'nompi']
 
