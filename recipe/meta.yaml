@@ -51,11 +51,11 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
   host:
     - eigen
-    - moab * {{ mpi_prefix }}_tempest*
+    - moab * {{ mpi_prefix }}_tempest_*
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
-    - moab * {{ mpi_prefix }}_tempest*
+    - moab * {{ mpi_prefix }}_tempest_*
     - zlib
     - {{ mpi }}  # [mpi != 'nompi']
 
