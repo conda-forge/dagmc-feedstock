@@ -44,7 +44,7 @@ build:
 
 requirements:
   run_constrained:
-    - moab * {{ mpi_prefix }}_tempest_* >=9999999
+    - moab * {{ mpi_prefix }}_tempest_*
   build:
     - cmake
     - make
