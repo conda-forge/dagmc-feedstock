@@ -51,10 +51,14 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
   host:
     - eigen
+    # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
+    - hdf5
+    - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
+    - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*
     - zlib
     - {{ mpi }}  # [mpi != 'nompi']
