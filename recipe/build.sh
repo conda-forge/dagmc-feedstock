@@ -32,6 +32,7 @@ cmake -DBUILD_MCNP5=OFF \
       -DBUILD_PIC=OFF \
       -DBUILD_RPATH=ON \
       -DDOUBLE_DOWN=OFF \
+      -DHDF5_ROOT="${PREFIX}" \
       -DMOAB_DIR="${PREFIX}" \
       -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
       ${CONFIGURE_ARGS}
