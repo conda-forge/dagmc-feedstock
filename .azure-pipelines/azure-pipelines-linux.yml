@@ -8,19 +8,32 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_mpimpich:
-        CONFIG: linux_64_mpimpich
+      linux_64_mpimpichuwuwOFF:
+        CONFIG: linux_64_mpimpichuwuwOFF
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_mpinompi:
-        CONFIG: linux_64_mpinompi
+      linux_64_mpimpichuwuwON:
+        CONFIG: linux_64_mpimpichuwuwON
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_mpiopenmpi:
-        CONFIG: linux_64_mpiopenmpi
+      linux_64_mpinompiuwuwOFF:
+        CONFIG: linux_64_mpinompiuwuwOFF
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpinompiuwuwON:
+        CONFIG: linux_64_mpinompiuwuwON
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpiopenmpiuwuwOFF:
+        CONFIG: linux_64_mpiopenmpiuwuwOFF
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+      linux_64_mpiopenmpiuwuwON:
+        CONFIG: linux_64_mpiopenmpiuwuwON
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360
+  variables: {}
 
   steps:
   # configure qemu binfmt-misc running.  This allows us to run docker containers

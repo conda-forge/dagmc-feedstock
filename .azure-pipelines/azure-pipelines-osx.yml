@@ -8,16 +8,26 @@ jobs:
     vmImage: macOS-11
   strategy:
     matrix:
-      osx_64_mpimpich:
-        CONFIG: osx_64_mpimpich
+      osx_64_mpimpichuwuwOFF:
+        CONFIG: osx_64_mpimpichuwuwOFF
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompi:
-        CONFIG: osx_64_mpinompi
+      osx_64_mpimpichuwuwON:
+        CONFIG: osx_64_mpimpichuwuwON
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpi:
-        CONFIG: osx_64_mpiopenmpi
+      osx_64_mpinompiuwuwOFF:
+        CONFIG: osx_64_mpinompiuwuwOFF
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpinompiuwuwON:
+        CONFIG: osx_64_mpinompiuwuwON
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpiopenmpiuwuwOFF:
+        CONFIG: osx_64_mpiopenmpiuwuwOFF
+        UPLOAD_PACKAGES: 'True'
+      osx_64_mpiopenmpiuwuwON:
+        CONFIG: osx_64_mpiopenmpiuwuwON
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
+  variables: {}
 
   steps:
   # TODO: Fast finish on azure pipelines?
