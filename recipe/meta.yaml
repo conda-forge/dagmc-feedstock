@@ -1,6 +1,6 @@
 {% set name = "dagmc" %}
 {% set version = "3.2.3" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -8,6 +8,11 @@
 {% if mpi == 'nompi' %}
 # prioritize nompi variant via build number
 {% set build = build + 100 %}
+{% endif %}
+
+{% if uwuw == 'ON' %}
+# prioritize uwuw variant via build number
+{% set build = build + 50 %}
 {% endif %}
 
 package:
@@ -33,7 +38,12 @@ build:
   {% else %}
   {% set mpi_prefix = "nompi" %}
   {% endif %}
-  string: {{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
+  {% if uwuw == 'ON' %}
+  {% set uwuw_prefix = "uwuw" %}
+  {% else %}
+  {% set uwuw_prefix = "nouwuw" %}
+  {% endif %}
+  string: {{ uwuw_prefix }}_{{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
 
   {% if mpi != 'nompi' %}
   run_exports:
