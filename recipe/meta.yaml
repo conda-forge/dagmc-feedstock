@@ -10,6 +10,9 @@
 {% set build = build + 100 %}
 {% endif %}
 
+# ensure doubledown is defined 
+{% set doubledown = doubledown or 'nodoubledown' %}
+
 package:
   name: {{ name }}
   version: {{ version }}
@@ -33,11 +36,22 @@ build:
   {% else %}
   {% set mpi_prefix = "nompi" %}
   {% endif %}
-  string: {{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
+
+  {% if doubledown != 'nodoubledown' %}
+  {% set doubledown_prefix = "doubledown" %}
+  {% else %}
+  {% set doubledown_prefix = "nodoubledown" %}
+  {% endif %}
+  string: {{ mpi_prefix }}_{{ doubledown_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
 
   {% if mpi != 'nompi' %}
   run_exports:
     - {{ name }} * {{ mpi_prefix }}_*
+  {% endif %}
+
+  {% if doubledown != 'nodoubledown' %}
+  run_exports:
+    - {{ name }} * {{ doubledown_prefix }}_*
   {% endif %}
 
   skip: True  # [win]
@@ -89,3 +103,4 @@ extra:
     - bam241
     - ngranda
     - shimwell
+    - bquan0

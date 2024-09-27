@@ -9,6 +9,11 @@ export CONFIGURE_ARGS=""
 if [[ "$mpi" != "nompi" ]]; then
   export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_C_COMPILER=mpicc ${CONFIGURE_ARGS}"
 fi
+if [[ "$doubledown" != "nodoubledown" ]]; then
+  export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON ${CONFIGURE_ARGS}"
+else then
+  export CONFIGURE_ARGS="-DDOUBLE_DOWN=OFF ${CONFIGURE_ARGS}"
+fi
 
 cmake -DBUILD_MCNP5=OFF \
       -DBUILD_MCNP6=OFF \
@@ -31,7 +36,6 @@ cmake -DBUILD_MCNP5=OFF \
       -DBUILD_STATIC_EXE=OFF \
       -DBUILD_PIC=OFF \
       -DBUILD_RPATH=ON \
-      -DDOUBLE_DOWN=OFF \
       -DMOAB_DIR="${PREFIX}" \
       -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
       ${CONFIGURE_ARGS}
