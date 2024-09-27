@@ -11,7 +11,7 @@
 {% endif %}
 
 # ensure doubledown is defined 
-{% set enable_doubledown = 'doubledown' or 'nodoubledown' %}
+{% set enable_doubledown = enable_doubledown or 'nodoubledown' %}
 
 package:
   name: {{ name }}
