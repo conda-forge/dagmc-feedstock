@@ -11,7 +11,7 @@
 {% endif %}
 
 # ensure doubledown is defined 
-{% set enable_doubledown = enable_doubledown or 'nodoubledown' %}
+{% set dd = dd or 'nodoubledown' %}
 
 package:
   name: {{ name }}
@@ -37,7 +37,7 @@ build:
   {% set mpi_prefix = "nompi" %}
   {% endif %}
 
-  {% if enable_doubledown != 'nodoubledown' %}
+  {% if dd != 'nodoubledown' %}
   {% set doubledown_prefix = "doubledown" %}
   {% else %}
   {% set doubledown_prefix = "nodoubledown" %}

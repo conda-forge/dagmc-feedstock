@@ -9,7 +9,7 @@ export CONFIGURE_ARGS=""
 if [[ "$mpi" != "nompi" ]]; then
   export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_C_COMPILER=mpicc ${CONFIGURE_ARGS}"
 fi
-if [[ "$enable_doubledown" != "nodoubledown" ]]; then
+if [[ "$dd" != "nodoubledown" ]]; then
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON ${CONFIGURE_ARGS}"
 else
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=OFF ${CONFIGURE_ARGS}"
