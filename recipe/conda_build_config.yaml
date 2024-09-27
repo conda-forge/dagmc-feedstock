@@ -3,6 +3,6 @@ mpi:
   - mpich
   - openmpi
 
-doubledown:
+enable_doubledown:
   - nodoubledown
   - doubledown
