@@ -11,7 +11,7 @@ if [[ "$mpi" != "nompi" ]]; then
 fi
 if [[ "$doubledown" != "nodoubledown" ]]; then
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON ${CONFIGURE_ARGS}"
-else then
+else
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=OFF ${CONFIGURE_ARGS}"
 fi
 
