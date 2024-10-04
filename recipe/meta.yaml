@@ -55,12 +55,14 @@ requirements:
   build:
     - cmake
     - make
+    - embree
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ mpi }}  # [mpi != 'nompi']
   host:
     - eigen
+    - embree
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
@@ -68,6 +70,7 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
+    - embree
     - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*
     - zlib
