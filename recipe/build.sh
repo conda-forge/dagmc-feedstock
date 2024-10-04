@@ -11,17 +11,13 @@ if [[ "$mpi" != "nompi" ]]; then
 fi
 if [[ "$dd" != "nodoubledown" ]]; then
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON ${CONFIGURE_ARGS}"
-  # install embree
-  # curl -L https://github.com/embree/embree/releases/download/v4.3.3/embree-4.3.3.x86_64.linux.tar.gz > embree-4.3.3.x86_64.linux.tar.gz 
-  # tar xzf embree-4.3.3.x86_64.linux.tar.gz
-  # source embree-vars.sh
   # clone double down repo
   git clone https://github.com/pshriwise/double-down
   cd double-down
   # configure the build
   mkdir bld
   cd bld
-  cmake .. -DCMAKE_INSTALL_PREFIX=/my/install/location -DCMAKE_PREFIX_PATH="/moab/install/location;/embree/install/location"
+  cmake .. -DCMAKE_INSTALL_PREFIX="./" -DCMAKE_PREFIX_PATH="${PREFIX};${PREFIX}"
   # build and test double-down
   make all test
   # install
