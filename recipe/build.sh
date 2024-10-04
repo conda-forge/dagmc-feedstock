@@ -14,7 +14,7 @@ if [[ "$dd" != "nodoubledown" ]]; then
   # install embree
   curl -L https://github.com/embree/embree/releases/download/v4.3.3/embree-4.3.3.x86_64.linux.tar.gz > embree-4.3.3.x86_64.linux.tar.gz 
   tar xzf embree-4.3.3.x86_64.linux.tar.gz
-  source embree-4.3.3.x86_64.linux/embree-vars.sh
+  source embree-vars.sh
   # clone double down repo
   git clone https://github.com/pshriwise/double-down
   cd double-down
