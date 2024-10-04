@@ -12,16 +12,16 @@ fi
 if [[ "$dd" != "nodoubledown" ]]; then
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON ${CONFIGURE_ARGS}"
   # clone double down repo
-  $ git clone https://github.com/pshriwise/double-down
-  $ cd double-down
+  git clone https://github.com/pshriwise/double-down
+  cd double-down
   # configure the build
-  $ mkdir bld
-  $ cd bld
-  $ cmake .. -DCMAKE_INSTALL_PREFIX=/my/install/location -DCMAKE_PREFIX_PATH="/moab/install/location;/embree/install/location"
+  mkdir bld
+  cd bld
+  cmake .. -DCMAKE_INSTALL_PREFIX=/my/install/location -DCMAKE_PREFIX_PATH="/moab/install/location;/embree/install/location"
   # build and test double-down
-  $ make all test
+  make all test
   # install
-  $ make install
+  make install
 else
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=OFF ${CONFIGURE_ARGS}"
 fi
