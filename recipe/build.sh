@@ -11,6 +11,9 @@ if [[ "$mpi" != "nompi" ]]; then
 fi
 if [[ "$dd" != "nodoubledown" ]]; then
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON ${CONFIGURE_ARGS}"
+  # install embree
+  tar xzf embree-4.3.3.x86_64.linux.tar.gz
+  source embree-4.3.3.x86_64.linux/embree-vars.sh
   # clone double down repo
   git clone https://github.com/pshriwise/double-down
   cd double-down
@@ -22,6 +25,7 @@ if [[ "$dd" != "nodoubledown" ]]; then
   make all test
   # install
   make install
+  cd ../..
 else
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=OFF ${CONFIGURE_ARGS}"
 fi
