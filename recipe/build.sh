@@ -17,7 +17,7 @@ if [[ "$dd" != "nodoubledown" ]]; then
   # configure the build
   mkdir bld
   cd bld
-  cmake .. -DCMAKE_INSTALL_PREFIX="./" -DCMAKE_PREFIX_PATH="${PREFIX};${PREFIX}"
+  cmake .. -DCMAKE_INSTALL_PREFIX="${PREFIX}" -DCMAKE_PREFIX_PATH="${PREFIX};${PREFIX}"
   # build and test double-down
   make all test
   # install
