@@ -12,8 +12,7 @@ fi
 if [[ "$dd" != "nodoubledown" ]]; then
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON ${CONFIGURE_ARGS}"
   # install embree
-  sudo apt-get install wget
-  wget https://github.com/embree/embree/releases/download/v4.3.3/embree-4.3.3.x86_64.linux.tar.gz
+  curl -L https://github.com/embree/embree/releases/download/v4.3.3/embree-4.3.3.x86_64.linux.tar.gz > embree-4.3.3.x86_64.linux.tar.gz 
   tar xzf embree-4.3.3.x86_64.linux.tar.gz
   source embree-4.3.3.x86_64.linux/embree-vars.sh
   # clone double down repo
