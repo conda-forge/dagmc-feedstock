@@ -34,87 +34,87 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_doubledowndoubledownmpimpich</td>
+              <td>linux_64_dddoubledownmpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_doubledowndoubledownmpimpich" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_dddoubledownmpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_doubledowndoubledownmpinompi</td>
+              <td>linux_64_dddoubledownmpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_doubledowndoubledownmpinompi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_dddoubledownmpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_doubledowndoubledownmpiopenmpi</td>
+              <td>linux_64_dddoubledownmpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_doubledowndoubledownmpiopenmpi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_dddoubledownmpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_doubledownnodoubledownmpimpich</td>
+              <td>linux_64_ddnodoubledownmpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_doubledownnodoubledownmpimpich" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ddnodoubledownmpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_doubledownnodoubledownmpinompi</td>
+              <td>linux_64_ddnodoubledownmpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_doubledownnodoubledownmpinompi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ddnodoubledownmpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_doubledownnodoubledownmpiopenmpi</td>
+              <td>linux_64_ddnodoubledownmpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_doubledownnodoubledownmpiopenmpi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_ddnodoubledownmpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_doubledowndoubledownmpimpich</td>
+              <td>osx_64_dddoubledownmpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_doubledowndoubledownmpimpich" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_dddoubledownmpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_doubledowndoubledownmpinompi</td>
+              <td>osx_64_dddoubledownmpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_doubledowndoubledownmpinompi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_dddoubledownmpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_doubledowndoubledownmpiopenmpi</td>
+              <td>osx_64_dddoubledownmpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_doubledowndoubledownmpiopenmpi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_dddoubledownmpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_doubledownnodoubledownmpimpich</td>
+              <td>osx_64_ddnodoubledownmpimpich</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_doubledownnodoubledownmpimpich" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_ddnodoubledownmpimpich" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_doubledownnodoubledownmpinompi</td>
+              <td>osx_64_ddnodoubledownmpinompi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_doubledownnodoubledownmpinompi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_ddnodoubledownmpinompi" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>osx_64_doubledownnodoubledownmpiopenmpi</td>
+              <td>osx_64_ddnodoubledownmpiopenmpi</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_doubledownnodoubledownmpiopenmpi" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_ddnodoubledownmpiopenmpi" alt="variant">
                 </a>
               </td>
             </tr>

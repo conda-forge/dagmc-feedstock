@@ -16,14 +16,14 @@ cxx_compiler:
 - gxx
 cxx_compiler_version:
 - '13'
+dd:
+- nodoubledown
 docker_image:
 - quay.io/condaforge/linux-anvil-cos7-x86_64
-doubledown:
-- doubledown
 hdf5:
 - 1.14.3
 mpi:
-- mpich
+- nompi
 mpich:
 - '4'
 openmpi:

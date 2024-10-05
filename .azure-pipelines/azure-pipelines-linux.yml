@@ -8,28 +8,28 @@ jobs:
     vmImage: ubuntu-latest
   strategy:
     matrix:
-      linux_64_doubledowndoubledownmpimpich:
-        CONFIG: linux_64_doubledowndoubledownmpimpich
+      linux_64_dddoubledownmpimpich:
+        CONFIG: linux_64_dddoubledownmpimpich
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_doubledowndoubledownmpinompi:
-        CONFIG: linux_64_doubledowndoubledownmpinompi
+      linux_64_dddoubledownmpinompi:
+        CONFIG: linux_64_dddoubledownmpinompi
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_doubledowndoubledownmpiopenmpi:
-        CONFIG: linux_64_doubledowndoubledownmpiopenmpi
+      linux_64_dddoubledownmpiopenmpi:
+        CONFIG: linux_64_dddoubledownmpiopenmpi
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_doubledownnodoubledownmpimpich:
-        CONFIG: linux_64_doubledownnodoubledownmpimpich
+      linux_64_ddnodoubledownmpimpich:
+        CONFIG: linux_64_ddnodoubledownmpimpich
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_doubledownnodoubledownmpinompi:
-        CONFIG: linux_64_doubledownnodoubledownmpinompi
+      linux_64_ddnodoubledownmpinompi:
+        CONFIG: linux_64_ddnodoubledownmpinompi
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
-      linux_64_doubledownnodoubledownmpiopenmpi:
-        CONFIG: linux_64_doubledownnodoubledownmpiopenmpi
+      linux_64_ddnodoubledownmpiopenmpi:
+        CONFIG: linux_64_ddnodoubledownmpiopenmpi
         UPLOAD_PACKAGES: 'True'
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
   timeoutInMinutes: 360

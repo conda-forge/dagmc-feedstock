@@ -18,8 +18,8 @@ cxx_compiler:
 - clangxx
 cxx_compiler_version:
 - '17'
-doubledown:
-- doubledown
+dd:
+- nodoubledown
 hdf5:
 - 1.14.3
 macos_machine:
