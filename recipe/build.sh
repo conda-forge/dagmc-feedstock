@@ -55,3 +55,4 @@ cmake -DBUILD_MCNP5=OFF \
 make -j "${CPU_COUNT}"
 make install
 make test
+ctest -V -R dagmc_unit_tests
