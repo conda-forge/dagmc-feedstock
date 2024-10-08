@@ -1,6 +1,6 @@
 {% set name = "dagmc" %}
 {% set version = "3.2.3" %}
-{% set build = 2 %}
+{% set build = 3 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -9,6 +9,9 @@
 # prioritize nompi variant via build number
 {% set build = build + 100 %}
 {% endif %}
+
+# ensure doubledown is defined 
+{% set dd = dd or 'nodoubledown' %}
 
 package:
   name: {{ name }}
@@ -33,7 +36,13 @@ build:
   {% else %}
   {% set mpi_prefix = "nompi" %}
   {% endif %}
-  string: {{ mpi_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
+
+  {% if dd != 'nodoubledown' %}
+  {% set doubledown_prefix = "doubledown" %}
+  {% else %}
+  {% set doubledown_prefix = "nodoubledown" %}
+  {% endif %}
+  string: {{ mpi_prefix }}_{{ doubledown_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
 
   {% if mpi != 'nompi' %}
   run_exports:
@@ -46,12 +55,14 @@ requirements:
   build:
     - cmake
     - make
+    - embree
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - {{ mpi }}  # [mpi != 'nompi']
   host:
     - eigen
+    - embree
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
@@ -59,6 +70,7 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
+    - embree
     - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*
     - zlib
@@ -89,3 +101,4 @@ extra:
     - bam241
     - ngranda
     - shimwell
+    - bquan0

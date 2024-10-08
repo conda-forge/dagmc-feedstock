@@ -2,3 +2,7 @@ mpi:
   - nompi
   - mpich
   - openmpi
+
+dd:
+  - nodoubledown
+  - doubledown
