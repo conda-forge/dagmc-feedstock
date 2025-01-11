@@ -34,6 +34,7 @@ cmake -DBUILD_MCNP5=OFF \
       -DDOUBLE_DOWN=OFF \
       -DMOAB_DIR="${PREFIX}" \
       -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+      -D_LIBCPP_DISABLE_AVAILABILITY \
       ${CONFIGURE_ARGS}
 make -j "${CPU_COUNT}"
 make install
