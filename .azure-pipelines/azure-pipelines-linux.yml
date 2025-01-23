@@ -11,6 +11,7 @@ jobs:
       linux_64_dddoubledownmpimpich:
         CONFIG: linux_64_dddoubledownmpimpich
         UPLOAD_PACKAGES: 'True'
+<<<<<<< HEAD
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_dddoubledownmpinompi:
         CONFIG: linux_64_dddoubledownmpinompi
@@ -30,8 +31,17 @@ jobs:
         DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
       linux_64_ddnodoubledownmpiopenmpi:
         CONFIG: linux_64_ddnodoubledownmpiopenmpi
+=======
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_mpinompi:
+        CONFIG: linux_64_mpinompi
         UPLOAD_PACKAGES: 'True'
-        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-cos7-x86_64
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
+      linux_64_mpiopenmpi:
+        CONFIG: linux_64_mpiopenmpi
+>>>>>>> conda-forge/main
+        UPLOAD_PACKAGES: 'True'
+        DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma9
   timeoutInMinutes: 360
   variables: {}
 
