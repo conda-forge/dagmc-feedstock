@@ -6,19 +6,6 @@ source .scripts/logging_utils.sh
 
 set -xe
 
-<<<<<<< HEAD
-MINIFORGE_HOME=${MINIFORGE_HOME:-${HOME}/miniforge3}
-
-( startgroup "Installing a fresh version of Miniforge" ) 2> /dev/null
-
-MINIFORGE_URL="https://github.com/conda-forge/miniforge/releases/latest/download"
-MINIFORGE_FILE="Miniforge3-MacOSX-$(uname -m).sh"
-curl -L -O "${MINIFORGE_URL}/${MINIFORGE_FILE}"
-rm -rf ${MINIFORGE_HOME}
-bash $MINIFORGE_FILE -b -p ${MINIFORGE_HOME}
-
-( endgroup "Installing a fresh version of Miniforge" ) 2> /dev/null
-=======
 MINIFORGE_HOME="${MINIFORGE_HOME:-${HOME}/miniforge3}"
 MINIFORGE_HOME="${MINIFORGE_HOME%/}" # remove trailing slash
 export CONDA_BLD_PATH="${CONDA_BLD_PATH:-${MINIFORGE_HOME}/conda-bld}"
@@ -45,7 +32,6 @@ mv "${MAMBA_ROOT_PREFIX}/pkgs" "${MINIFORGE_HOME}"
 echo "Cleaning up micromamba"
 rm -rf "${MAMBA_ROOT_PREFIX}" "${micromamba_exe}" || true
 ( endgroup "Provisioning base env with micromamba" ) 2> /dev/null
->>>>>>> conda-forge/main
 
 ( startgroup "Configuring conda" ) 2> /dev/null
 echo "Activating environment"
@@ -110,13 +96,8 @@ else
 
     ( startgroup "Inspecting artifacts" ) 2> /dev/null
 
-<<<<<<< HEAD
-    # inspect_artifacts was only added in conda-forge-ci-setup 4.6.0
-    command -v inspect_artifacts >/dev/null 2>&1 && inspect_artifacts || echo "inspect_artifacts needs conda-forge-ci-setup >=4.6.0"
-=======
     # inspect_artifacts was only added in conda-forge-ci-setup 4.9.4
     command -v inspect_artifacts >/dev/null 2>&1 && inspect_artifacts --recipe-dir ./recipe -m ./.ci_support/${CONFIG}.yaml || echo "inspect_artifacts needs conda-forge-ci-setup >=4.9.4"
->>>>>>> conda-forge/main
 
     ( endgroup "Inspecting artifacts" ) 2> /dev/null
     ( startgroup "Validating outputs" ) 2> /dev/null

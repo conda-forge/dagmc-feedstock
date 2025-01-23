@@ -7,11 +7,7 @@ c_stdlib:
 c_stdlib_version:
 - '2.17'
 cdt_name:
-<<<<<<< HEAD:.ci_support/linux_64_dddoubledownmpiopenmpi.yaml
-- cos7
-=======
 - conda
->>>>>>> conda-forge/main:.ci_support/linux_64_mpiopenmpi.yaml
 channel_sources:
 - conda-forge
 channel_targets:
@@ -20,11 +16,8 @@ cxx_compiler:
 - gxx
 cxx_compiler_version:
 - '13'
-<<<<<<< HEAD:.ci_support/linux_64_dddoubledownmpiopenmpi.yaml
 dd:
 - doubledown
-=======
->>>>>>> conda-forge/main:.ci_support/linux_64_mpiopenmpi.yaml
 docker_image:
 - quay.io/condaforge/linux-anvil-x86_64:alma9
 hdf5:
