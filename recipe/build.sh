@@ -51,7 +51,7 @@ CXXFLAGS=-D_LIBCPP_DISABLE_AVAILABILITY cmake -DBUILD_MCNP5=OFF \
       -DBUILD_RPATH=ON \
       -DMOAB_DIR="${PREFIX}" \
       -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
-      ${CONFIGURE_ARGS}
+      ${CONFIGURE_ARGS} .
 make -j "${CPU_COUNT}"
 make install
 make test
