@@ -70,7 +70,7 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
-    - embree
+    - embree  # [dd != "nodoubledown"]
     - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*
     - zlib
