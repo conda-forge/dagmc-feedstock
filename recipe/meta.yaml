@@ -55,7 +55,7 @@ requirements:
   build:
     - cmake
     - make
-    - embree
+    - embree  # [dd != "nodoubledown"]
     - {{ compiler('c') }}
     - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
