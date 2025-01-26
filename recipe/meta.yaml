@@ -62,7 +62,7 @@ requirements:
     - {{ mpi }}  # [mpi != 'nompi']
   host:
     - eigen
-    - embree
+    - embree  # [dd != "nodoubledown"]
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
