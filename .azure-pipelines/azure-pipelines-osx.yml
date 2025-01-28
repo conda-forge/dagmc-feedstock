@@ -8,14 +8,23 @@ jobs:
     vmImage: macOS-13
   strategy:
     matrix:
-      osx_64_mpimpich:
-        CONFIG: osx_64_mpimpich
+      osx_64_dddoubledownmpimpich:
+        CONFIG: osx_64_dddoubledownmpimpich
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpinompi:
-        CONFIG: osx_64_mpinompi
+      osx_64_dddoubledownmpinompi:
+        CONFIG: osx_64_dddoubledownmpinompi
         UPLOAD_PACKAGES: 'True'
-      osx_64_mpiopenmpi:
-        CONFIG: osx_64_mpiopenmpi
+      osx_64_dddoubledownmpiopenmpi:
+        CONFIG: osx_64_dddoubledownmpiopenmpi
+        UPLOAD_PACKAGES: 'True'
+      osx_64_ddnodoubledownmpimpich:
+        CONFIG: osx_64_ddnodoubledownmpimpich
+        UPLOAD_PACKAGES: 'True'
+      osx_64_ddnodoubledownmpinompi:
+        CONFIG: osx_64_ddnodoubledownmpinompi
+        UPLOAD_PACKAGES: 'True'
+      osx_64_ddnodoubledownmpiopenmpi:
+        CONFIG: osx_64_ddnodoubledownmpiopenmpi
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}
