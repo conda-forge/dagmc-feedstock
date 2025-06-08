@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 
+set -ex
+
 # Install DAGMC
 # default options from
 # https://github.com/svalinn/DAGMC/blob/develop/cmake/DAGMC_macros.cmake
 
-export CONFIGURE_ARGS=""
+export CONFIGURE_ARGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
 if [[ "$mpi" != "nompi" ]]; then
   export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_C_COMPILER=mpicc ${CONFIGURE_ARGS}"
