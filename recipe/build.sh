@@ -19,7 +19,12 @@ if [[ "$dd" != "nodoubledown" ]]; then
   # configure the build
   mkdir bld
   cd bld
-  cmake .. -DCMAKE_INSTALL_PREFIX="${PREFIX}" -DMOAB_DIR="${PREFIX}" -DEMBREE_DIR="${PREFIX}"
+  cmake ${CMAKE_ARGS} \
+     -DCMAKE_POLICY_VERSION_MINIMUM=3.5 \
+     -DCMAKE_INSTALL_PREFIX="${PREFIX}" \
+     -DMOAB_DIR="${PREFIX}" \
+     -DEMBREE_DIR="${PREFIX}" \
+     ..
   # build and test double-down
   make all test
   # install
@@ -30,7 +35,9 @@ else
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=OFF ${CONFIGURE_ARGS}"
 fi
 
-CXXFLAGS=-D_LIBCPP_DISABLE_AVAILABILITY cmake -DBUILD_MCNP5=OFF \
+CXXFLAGS="-D_LIBCPP_DISABLE_AVAILABILITY ${CXXFLAGS}"
+
+cmake -DBUILD_MCNP5=OFF \
       -DBUILD_MCNP6=OFF \
       -DBUILD_MCNP_PLOT=OFF \
       -DBUILD_MCNP_OPENMP=OFF \
