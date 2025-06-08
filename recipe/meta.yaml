@@ -67,7 +67,7 @@ requirements:
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*  # [linux]
-    - moab * {{ mpi_prefix }}            # [osx]
+    - moab * {{ mpi_prefix }}_*          # [osx]
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
