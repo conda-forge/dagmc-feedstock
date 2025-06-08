@@ -73,7 +73,8 @@ requirements:
     - eigen
     - embree  # [dd != "nodoubledown"]
     - hdf5 * {{ mpi_prefix }}_*
-    - moab * {{ mpi_prefix }}_tempest_*
+    - moab * {{ mpi_prefix }}_tempest_*  # [linux]
+    - moab * {{ mpi_prefix }}_*          # [osx]
     - zlib
     - {{ mpi }}  # [mpi != 'nompi']
 
