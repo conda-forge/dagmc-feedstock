@@ -17,7 +17,8 @@ if [[ "$dd" != "nodoubledown" ]]; then
   # configure the build
   mkdir bld
   cd bld
-  cmake .. -DCMAKE_INSTALL_PREFIX="${PREFIX}" -DMOAB_DIR="${PREFIX}" -DEMBREE_DIR="${PREFIX}"
+  cmake .. -DCMAKE_INSTALL_PREFIX="${PREFIX}" -DMOAB_DIR="${PREFIX}" -DEMBREE_DIR="${PREFIX}" \
+           -DCMAKE_POLICY_VERSION_MINIMUM=3.5
   # build and test double-down
   make all test
   # install
