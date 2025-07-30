@@ -66,15 +66,15 @@ requirements:
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
-    - moab * {{ mpi_prefix }}_tempest_*   # [linux]
-    - moab * {{ mpi_prefix }}_notempest_* # [osx]
+    - moab * {{ mpi_prefix }}_tempest_*  # [linux]
+    - moab * {{ mpi_prefix }}_notempest_*  # [osx]
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
     - embree  # [dd != "nodoubledown"]
     - hdf5 * {{ mpi_prefix }}_*
-    - moab * {{ mpi_prefix }}_tempest_*   # [linux]
-    - moab * {{ mpi_prefix }}_notempest_* # [osx]
+    - moab * {{ mpi_prefix }}_tempest_*  # [linux]
+    - moab * {{ mpi_prefix }}_notempest_*  # [osx]
     - zlib
     - {{ mpi }}  # [mpi != 'nompi']
 
