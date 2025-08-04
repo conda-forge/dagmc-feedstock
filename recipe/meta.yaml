@@ -1,6 +1,6 @@
 {% set name = "dagmc" %}
 {% set version = "3.2.4" %}
-{% set build = 1 %}
+{% set build = 2 %}
 
 # ensure mpi is defined (needed for conda-smithy recipe-lint)
 {% set mpi = mpi or 'nompi' %}
@@ -42,7 +42,7 @@ build:
   {% set doubledown_prefix = "nodoubledown" %}
   {% endif %}
   
-  string: {{ mpi_prefix }}_{{ doubledown_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
+  string: {{ mpi_prefix }}_{{ doubledown_prefix }}_h{{ PKG_HASH }}_{{ build }}
 
   {% if mpi != 'nompi' %}
   run_exports:
@@ -66,13 +66,15 @@ requirements:
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
-    - moab * {{ mpi_prefix }}_tempest_*
+    - moab * {{ mpi_prefix }}_tempest_*  # [linux]
+    - moab * {{ mpi_prefix }}_notempest_*  # [osx]
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
     - embree  # [dd != "nodoubledown"]
     - hdf5 * {{ mpi_prefix }}_*
-    - moab * {{ mpi_prefix }}_tempest_*
+    - moab * {{ mpi_prefix }}_tempest_*  # [linux]
+    - moab * {{ mpi_prefix }}_notempest_*  # [osx]
     - zlib
     - {{ mpi }}  # [mpi != 'nompi']
 
