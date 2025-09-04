@@ -5,7 +5,7 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-13
+    vmImage: macOS-15
   strategy:
     matrix:
       osx_64_dddoubledownmpimpich:
@@ -25,6 +25,24 @@ jobs:
         UPLOAD_PACKAGES: 'True'
       osx_64_ddnodoubledownmpiopenmpi:
         CONFIG: osx_64_ddnodoubledownmpiopenmpi
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_dddoubledownmpimpich:
+        CONFIG: osx_arm64_dddoubledownmpimpich
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_dddoubledownmpinompi:
+        CONFIG: osx_arm64_dddoubledownmpinompi
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_dddoubledownmpiopenmpi:
+        CONFIG: osx_arm64_dddoubledownmpiopenmpi
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_ddnodoubledownmpimpich:
+        CONFIG: osx_arm64_ddnodoubledownmpimpich
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_ddnodoubledownmpinompi:
+        CONFIG: osx_arm64_ddnodoubledownmpinompi
+        UPLOAD_PACKAGES: 'True'
+      osx_arm64_ddnodoubledownmpiopenmpi:
+        CONFIG: osx_arm64_ddnodoubledownmpiopenmpi
         UPLOAD_PACKAGES: 'True'
   timeoutInMinutes: 360
   variables: {}
