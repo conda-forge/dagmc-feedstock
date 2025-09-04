@@ -63,5 +63,7 @@ cmake -DBUILD_MCNP5=OFF \
       ${CONFIGURE_ARGS} .
 make -j "${CPU_COUNT}"
 make install
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 make test
+fi
 ctest -V -R dagmc_unit_tests
