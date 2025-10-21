@@ -42,7 +42,7 @@ build:
   {% set doubledown_prefix = "nodoubledown" %}
   {% endif %}
   
-  string: {{ mpi_prefix }}_{{ doubledown_prefix }}_py{{ CONDA_PY }}h{{ PKG_HASH }}_{{ build }}
+  string: {{ mpi_prefix }}_{{ doubledown_prefix }}_h{{ PKG_HASH }}_{{ build }}
 
   {% if mpi != 'nompi' %}
   run_exports:
@@ -67,14 +67,14 @@ requirements:
     - hdf5
     - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*  # [linux]
-    - moab * {{ mpi_prefix }}_*          # [osx]
+    - moab * {{ mpi_prefix }}_notempest_*  # [osx]
     - {{ mpi }}  # [mpi != 'nompi']
   run:
     - eigen
     - embree  # [dd != "nodoubledown"]
     - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*  # [linux]
-    - moab * {{ mpi_prefix }}_*          # [osx]
+    - moab * {{ mpi_prefix }}_notempest_*  # [osx]
     - zlib
     - {{ mpi }}  # [mpi != 'nompi']
 
