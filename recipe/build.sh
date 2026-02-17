@@ -10,6 +10,13 @@ if [[ "$mpi" != "nompi" ]]; then
   export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_C_COMPILER=mpicc"
 fi
 
+if [[ "$dd" != "nodoubledown" ]]; then
+  export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON -Ddd_ROOT=${PREFIX} ${CONFIGURE_ARGS}"
+else
+  export CONFIGURE_ARGS="-DDOUBLE_DOWN=OFF ${CONFIGURE_ARGS}"
+fi
+
+
 export CXXFLAGS="-D_LIBCPP_DISABLE_AVAILABILITY ${CXXFLAGS}"
 
 cmake ${CMAKE_ARGS} \
