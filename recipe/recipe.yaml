@@ -50,7 +50,7 @@ requirements:
   host:
     - eigen
     - if: dd != "nodoubledown"
-      then: embree
+      then: double-down
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
     - hdf5
     - hdf5 [build=${{ mpi_prefix }}_*]
@@ -63,7 +63,7 @@ requirements:
   run:
     - eigen
     - if: dd != "nodoubledown"
-      then: embree
+      then: double-down
     - hdf5 * [build=${{ mpi_prefix }}_*]
     - if: linux
       then: moab * [build=${{ mpi_prefix }}_tempest_*]
