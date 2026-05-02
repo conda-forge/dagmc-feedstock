@@ -5,27 +5,57 @@
 jobs:
 - job: osx
   pool:
-    vmImage: macOS-15
+    vmImage: $(VMIMAGE)
   strategy:
     matrix:
-      osx_64_dddoubledownmpimpich:
-        CONFIG: osx_64_dddoubledownmpimpich
+      osx_64_dddoubledownhdf51.14.6mpimpich:
+        CONFIG: osx_64_dddoubledownhdf51.14.6mpimpich
         UPLOAD_PACKAGES: 'True'
-      osx_64_dddoubledownmpinompi:
-        CONFIG: osx_64_dddoubledownmpinompi
+        VMIMAGE: macOS-15
+      osx_64_dddoubledownhdf51.14.6mpinompi:
+        CONFIG: osx_64_dddoubledownhdf51.14.6mpinompi
         UPLOAD_PACKAGES: 'True'
-      osx_64_dddoubledownmpiopenmpi:
-        CONFIG: osx_64_dddoubledownmpiopenmpi
+        VMIMAGE: macOS-15
+      osx_64_dddoubledownhdf51.14.6mpiopenmpi:
+        CONFIG: osx_64_dddoubledownhdf51.14.6mpiopenmpi
         UPLOAD_PACKAGES: 'True'
-      osx_64_ddnodoubledownmpimpich:
-        CONFIG: osx_64_ddnodoubledownmpimpich
+        VMIMAGE: macOS-15
+      osx_64_dddoubledownhdf52mpimpich:
+        CONFIG: osx_64_dddoubledownhdf52mpimpich
         UPLOAD_PACKAGES: 'True'
-      osx_64_ddnodoubledownmpinompi:
-        CONFIG: osx_64_ddnodoubledownmpinompi
+        VMIMAGE: macOS-15
+      osx_64_dddoubledownhdf52mpinompi:
+        CONFIG: osx_64_dddoubledownhdf52mpinompi
         UPLOAD_PACKAGES: 'True'
-      osx_64_ddnodoubledownmpiopenmpi:
-        CONFIG: osx_64_ddnodoubledownmpiopenmpi
+        VMIMAGE: macOS-15
+      osx_64_dddoubledownhdf52mpiopenmpi:
+        CONFIG: osx_64_dddoubledownhdf52mpiopenmpi
         UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_64_ddnodoubledownhdf51.14.6mpimpich:
+        CONFIG: osx_64_ddnodoubledownhdf51.14.6mpimpich
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_64_ddnodoubledownhdf51.14.6mpinompi:
+        CONFIG: osx_64_ddnodoubledownhdf51.14.6mpinompi
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_64_ddnodoubledownhdf51.14.6mpiopenmpi:
+        CONFIG: osx_64_ddnodoubledownhdf51.14.6mpiopenmpi
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_64_ddnodoubledownhdf52mpimpich:
+        CONFIG: osx_64_ddnodoubledownhdf52mpimpich
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_64_ddnodoubledownhdf52mpinompi:
+        CONFIG: osx_64_ddnodoubledownhdf52mpinompi
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
+      osx_64_ddnodoubledownhdf52mpiopenmpi:
+        CONFIG: osx_64_ddnodoubledownhdf52mpiopenmpi
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15
   timeoutInMinutes: 360
   variables: {}
 
