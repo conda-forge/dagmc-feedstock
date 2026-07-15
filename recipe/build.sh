@@ -37,7 +37,9 @@ fi
 
 export CXXFLAGS="-D_LIBCPP_DISABLE_AVAILABILITY ${CXXFLAGS}"
 
-cmake -DBUILD_MCNP5=OFF \
+cmake ${CMAKE_ARGS} \
+      -DCMAKE_IGNORE_PREFIX_PATH="/opt/homebrew;/usr/local" \
+      -DBUILD_MCNP5=OFF \
       -DBUILD_MCNP6=OFF \
       -DBUILD_MCNP_PLOT=OFF \
       -DBUILD_MCNP_OPENMP=OFF \
@@ -65,5 +67,5 @@ make -j "${CPU_COUNT}"
 make install
 if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 make test
-fi
 ctest -V -R dagmc_unit_tests
+fi

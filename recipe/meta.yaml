@@ -61,7 +61,7 @@ requirements:
     - {{ compiler('cxx') }}
     - {{ mpi }}  # [mpi != 'nompi']
   host:
-    - eigen
+    - eigen 3.*  # DAGMC 3.2.4 predates Eigen 5 (operator[] on 3x3 matrix via moab/Matrix3.hpp)
     - embree  # [dd != "nodoubledown"]
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
     - hdf5
@@ -70,7 +70,7 @@ requirements:
     - moab * {{ mpi_prefix }}_notempest_*  # [osx]
     - {{ mpi }}  # [mpi != 'nompi']
   run:
-    - eigen
+    - eigen 3.*
     - embree  # [dd != "nodoubledown"]
     - hdf5 * {{ mpi_prefix }}_*
     - moab * {{ mpi_prefix }}_tempest_*  # [linux]
