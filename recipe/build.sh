@@ -16,6 +16,9 @@ if [[ "$dd" != "nodoubledown" ]]; then
   # clone double down repo
   git clone -b v1.1.0 --depth 1 https://github.com/pshriwise/double-down.git
   cd double-down
+  # double-down v1.1.0 hardcodes -march=native -mavx2: x86-only, breaks
+  # osx-arm64 cross-compile, and non-portable for conda-forge binaries anyway
+  sed -i.bak 's/ -march=native -mavx2//g' CMakeLists.txt
   # configure the build
   mkdir bld
   cd bld
