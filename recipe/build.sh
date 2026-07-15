@@ -9,12 +9,17 @@ set -ex
 export CONFIGURE_ARGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
 if [[ "$mpi" != "nompi" ]]; then
-  export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_C_COMPILER=mpicc ${CONFIGURE_ARGS}"
-  # mpich's compiler wrappers ignore the conda cross toolchain and fall back
-  # to the build-platform compiler, producing x86_64 objects in osx-arm64
-  # cross builds; point them at the target compilers explicitly.
-  # (openmpi's wrappers already honor OMPI_CC/OMPI_CXX set on activation.)
+  # mpich's wrappers need pointing at the cross compilers, and in cross
+  # builds the bare name resolves to the build-env (x86_64) wrapper whose
+  # embedded libmpicxx is the wrong arch — use the host-env wrapper script
+  # by absolute path instead. (openmpi's wrappers honor OMPI_CC/OMPI_CXX
+  # from activation and its cross builds link correctly as-is.)
   export MPICH_CC="${CC}" MPICH_CXX="${CXX}"
+  if [[ "$mpi" == "mpich" && "${CONDA_BUILD_CROSS_COMPILATION:-}" == "1" ]]; then
+    export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=${PREFIX}/bin/mpicxx -DCMAKE_C_COMPILER=${PREFIX}/bin/mpicc ${CONFIGURE_ARGS}"
+  else
+    export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_C_COMPILER=mpicc ${CONFIGURE_ARGS}"
+  fi
 fi
 if [[ "$dd" != "nodoubledown" ]]; then
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON -Ddd_ROOT=${PREFIX}  ${CONFIGURE_ARGS}"
