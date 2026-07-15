@@ -10,15 +10,23 @@ export CONFIGURE_ARGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
 
 if [[ "$mpi" != "nompi" ]]; then
   export CONFIGURE_ARGS="-DCMAKE_CXX_COMPILER=mpicxx -DCMAKE_C_COMPILER=mpicc ${CONFIGURE_ARGS}"
+  # mpich's compiler wrappers ignore the conda cross toolchain and fall back
+  # to the build-platform compiler, producing x86_64 objects in osx-arm64
+  # cross builds; point them at the target compilers explicitly.
+  # (openmpi's wrappers already honor OMPI_CC/OMPI_CXX set on activation.)
+  export MPICH_CC="${CC}" MPICH_CXX="${CXX}"
 fi
 if [[ "$dd" != "nodoubledown" ]]; then
   export CONFIGURE_ARGS="-DDOUBLE_DOWN=ON -Ddd_ROOT=${PREFIX}  ${CONFIGURE_ARGS}"
-  # clone double down repo
-  git clone -b v1.1.0 --depth 1 https://github.com/pshriwise/double-down.git
+  # clone double down repo; v1.1.0 plus the fix for wrong point_in_volume
+  # results on non-AVX2 builds (double-down#53) — no tagged release has it yet
+  git clone https://github.com/pshriwise/double-down.git
   cd double-down
-  # double-down v1.1.0 hardcodes -march=native -mavx2: x86-only, breaks
-  # osx-arm64 cross-compile, and non-portable for conda-forge binaries anyway
-  sed -i.bak 's/ -march=native -mavx2//g' CMakeLists.txt
+  git checkout 4a927468
+  # strip hardcoded microarch flags: -march=native is non-reproducible and
+  # breaks osx-arm64 cross-compile; -mavx2 exceeds the conda-forge x86-64
+  # baseline. Safe post-double-down#53: the non-AVX2 path is now correct.
+  sed -i.bak 's/ -march=native//g; s/ -mavx2//g' CMakeLists.txt
   # configure the build
   mkdir bld
   cd bld
@@ -28,8 +36,11 @@ if [[ "$dd" != "nodoubledown" ]]; then
      -DMOAB_DIR="${PREFIX}" \
      -DEMBREE_DIR="${PREFIX}" \
      ..
-  # build and test double-down
-  make all test
+  # build double-down; run its tests only where they can execute
+  make all
+  if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
+    make test
+  fi
   # install
   make install
   cd ../..
