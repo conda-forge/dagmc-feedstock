@@ -28,10 +28,13 @@ if [[ "$dd" != "nodoubledown" ]]; then
   git clone https://github.com/pshriwise/double-down.git
   cd double-down
   git checkout 4a927468
-  # strip hardcoded microarch flags: -march=native is non-reproducible and
-  # breaks osx-arm64 cross-compile; -mavx2 exceeds the conda-forge x86-64
-  # baseline. Safe post-double-down#53: the non-AVX2 path is now correct.
-  sed -i.bak 's/ -march=native//g; s/ -mavx2//g' CMakeLists.txt
+  # arm64 targets only: clang rejects -march=native for arm64-apple-darwin
+  # (cross or native) and -mavx2 is x86-only. x86_64 keeps both flags, as
+  # this feedstock always has. The resulting non-AVX2 arm64 code path is
+  # correct because the checkout above includes the double-down#53 fix.
+  if [[ "${target_platform}" == "osx-arm64" || "${target_platform}" == "linux-aarch64" ]]; then
+    sed -i.bak 's/ -march=native//g; s/ -mavx2//g' CMakeLists.txt
+  fi
   # configure the build
   mkdir bld
   cd bld
