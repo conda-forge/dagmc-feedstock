@@ -67,10 +67,9 @@ requirements:
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
     - hdf5
     - hdf5 [build=${{ mpi_prefix }}_*]
-    - if: linux
-      then: moab [build=${{ mpi_prefix }}_tempest_*]
-    - if: osx
-      then: moab [build=${{ mpi_prefix }}_notempest_*]
+    # DAGMC does not need TempestRemap
+    # c.f. https://github.com/conda-forge/dagmc-feedstock/issues/41
+    - moab [build=${{ mpi_prefix }}_notempest_*]
     - if: mpi != "nompi"
       then: ${{ mpi }}
   run:
@@ -78,10 +77,7 @@ requirements:
     - if: dd != "nodoubledown"
       then: double-down
     - hdf5 * [build=${{ mpi_prefix }}_*]
-    - if: linux
-      then: moab * [build=${{ mpi_prefix }}_tempest_*]
-    - if: osx
-      then: moab * [build=${{ mpi_prefix }}_notempest_*]
+    - moab * [build=${{ mpi_prefix }}_notempest_*]
     - zlib
     - if: mpi != "nompi"
       then: ${{ mpi }}
