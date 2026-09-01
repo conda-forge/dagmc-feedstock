@@ -54,7 +54,12 @@ requirements:
     # needed by the PyNE amalgamation scripts run from src/pyne/CMakeLists.txt
     - python
   host:
-    - eigen
+    # DAGMC (KDEKernel.hpp) and MOAB (Matrix3.hpp) expose Eigen types in
+    # their public headers, so depend on eigen-abi-devel to get the eigen-abi
+    # ABI marker run export. Constrain to the Eigen v3 API/ABI to match MOAB,
+    # which is built against eigen 3.*.
+    # c.f. https://github.com/conda-forge/eigen-feedstock/blob/main/recipe/README.md
+    - eigen-abi-devel 3.*
     - if: dd != "nodoubledown"
       then: double-down
     # matching MOAB HDF5 host requirements to ensure matched pinning of HDF5 versions
@@ -66,7 +71,6 @@ requirements:
     - if: mpi != "nompi"
       then: ${{ mpi }}
   run:
-    - eigen
     - if: dd != "nodoubledown"
       then: double-down
     - hdf5 * [build=${{ mpi_prefix }}_*]
