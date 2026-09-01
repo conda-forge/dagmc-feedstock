@@ -47,19 +47,12 @@ build:
 
 requirements:
   build:
+    - ${{ stdlib("c") }}
+    - ${{ compiler("cxx") }}
     - cmake
     - make
     # needed by the PyNE amalgamation scripts run from src/pyne/CMakeLists.txt
     - python
-    # REMOVE: This is not a build tool
-    # - if: dd != "nodoubledown"
-    #   then: embree
-    - ${{ compiler("c") }}
-    - ${{ stdlib("c") }}
-    - ${{ compiler("cxx") }}
-    # REMOVE: This is not a build tool
-    # - if: mpi != "nompi"
-    #   then: mpi [build=${{ mpi }}]
   host:
     - eigen
     - if: dd != "nodoubledown"
@@ -82,15 +75,17 @@ requirements:
     - if: mpi != "nompi"
       then: ${{ mpi }}
   run_exports:
+    # constrain downstream packages to the same mpi variant
     - if: mpi != "nompi"
-      then: ${{ pin_subpackage("dagmc * ${{ mpi_prefix }}_*", exact=True) }}
+      then: dagmc * ${{ mpi_prefix }}_*
 
 tests:
   - package_contents:
       bin:
         - make_watertight
       include:
-        - dagmc/*
+        # DAGMC installs its headers directly under include/
+        - DagMC.hpp
       lib:
         - dagmc
 
