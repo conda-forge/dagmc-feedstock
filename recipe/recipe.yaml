@@ -14,6 +14,17 @@ source:
     # c.f. https://github.com/svalinn/DAGMC/pull/990
     patches:
       - cmake-policy-max.patch
+      # amalgamate_pyne.sh runs `git rev-parse HEAD` into an unused variable,
+      # which aborts the script (`set -e`) before remove_unsupported.py runs,
+      # as the source tarball is not a git repository.
+      - amalgamate-pyne-no-git.patch
+  # DAGMC vendors PyNE as a git submodule, which the GitHub release tarball
+  # does not include, so add the submodule commit pinned by the DAGMC release
+  # as an additional source.
+  # c.f. https://github.com/svalinn/DAGMC/tree/v3.2.4/src/pyne
+  - url: https://github.com/pyne/pyne/archive/e55e52e24a5394aebec78a15e94842fba86f68c9.tar.gz
+    sha256: 30207b34a555c62bf1d641d69a3ab320d4413097b72c502a4cf3303560df1c7e
+    target_directory: src/pyne/pyne
 
 build:
   # add build string so packages can depend on
@@ -38,6 +49,8 @@ requirements:
   build:
     - cmake
     - make
+    # needed by the PyNE amalgamation scripts run from src/pyne/CMakeLists.txt
+    - python
     # REMOVE: This is not a build tool
     # - if: dd != "nodoubledown"
     #   then: embree
