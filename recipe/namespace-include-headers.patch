@@ -1,0 +1,43 @@
+From ef86440dd2ff66b553916d0ab4534dc25aa61ef3 Mon Sep 17 00:00:00 2001
+From: Matthew Feickert <matthew.feickert@cern.ch>
+Date: Tue, 1 Sep 2026 12:14:01 -0600
+Subject: [PATCH] FIX: Install public headers under include/dagmc/
+
+Namespace the installed headers under include/dagmc/ instead of the top
+level of the install prefix's include directory, following the
+include/<project>/ convention of DAGMC's dependencies (e.g. MOAB,
+Eigen). This avoids collisions and silent wrong-header resolution when
+DAGMC shares an install prefix with other packages (e.g. DAGMC's
+installed pyne.h vs. PyNE's include/pyne/pyne.h in a conda
+environment).
+
+The exported CMake package config follows automatically. The imported
+targets' INSTALL_INTERFACE include directories, DAGMC_INCLUDE_DIRS, and
+the make_watertight subdirectory headers all derive from
+INSTALL_INCLUDE_DIR. The previous layout can be restored by configuring
+with -DINSTALL_INCLUDE_DIR=include.
+---
+ cmake/DAGMC_macros.cmake | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/cmake/DAGMC_macros.cmake b/cmake/DAGMC_macros.cmake
+index d5b2cd04..c8e264f3 100644
+--- a/cmake/DAGMC_macros.cmake
++++ b/cmake/DAGMC_macros.cmake
+@@ -23,7 +23,12 @@ macro (dagmc_setup_build)
+   # Installation directories
+   set(INSTALL_BIN_DIR     bin)
+   set(INSTALL_LIB_DIR     lib)
+-  set(INSTALL_INCLUDE_DIR include)
++  # Namespace the installed headers to avoid polluting the top level of the
++  # install prefix's include directory. This behavior can be overridden with
++  # -DINSTALL_INCLUDE_DIR
++  if (NOT INSTALL_INCLUDE_DIR)
++    set(INSTALL_INCLUDE_DIR include/dagmc)
++  endif ()
+   set(INSTALL_TESTS_DIR   tests)
+   set(INSTALL_TOOLS_DIR   tools)
+   set(INSTALL_SHARE_DIR   share)
+-- 
+2.55.0
+

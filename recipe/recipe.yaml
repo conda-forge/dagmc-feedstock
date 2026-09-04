@@ -11,13 +11,15 @@ package:
 source:
   - url: https://github.com/svalinn/DAGMC/archive/v${{ version }}.tar.gz
     sha256: ace39cb6cc05f1de316815512a0afe9f96c771449f8f0b12d65dfed915fb9788
-    # c.f. https://github.com/svalinn/DAGMC/pull/990
     patches:
+      # c.f. https://github.com/svalinn/DAGMC/pull/990
       - cmake-policy-max.patch
       # amalgamate_pyne.sh runs `git rev-parse HEAD` into an unused variable,
       # which aborts the script (`set -e`) before remove_unsupported.py runs,
       # as the source tarball is not a git repository.
       - amalgamate-pyne-no-git.patch
+      # c.f. https://github.com/svalinn/DAGMC/pull/998
+      - namespace-include-headers.patch
   # DAGMC vendors PyNE as a git submodule, which the GitHub release tarball
   # does not include, so add the submodule commit pinned by the DAGMC release
   # as an additional source.
@@ -90,8 +92,7 @@ tests:
       bin:
         - make_watertight
       include:
-        # DAGMC installs its headers directly under include/
-        - DagMC.hpp
+        - dagmc/DagMC.hpp
       lib:
         - dagmc
 
