@@ -1,0 +1,80 @@
+From 75e3d72874d34c2a13da83843652e41e94d5fae5 Mon Sep 17 00:00:00 2001
+From: Matthew Feickert <matthew.feickert@cern.ch>
+Date: Wed, 11 Feb 2026 23:48:29 -0700
+Subject: [PATCH] MNT: Use policy_max in cmake_minimum_required
+
+* Set policy_max which defines the maximum CMake policy. cmake_minimum_required
+  sets two minimums: the real (lower) minimum and the (upper) minimum based on
+  has been tested with. The defaults (CMake policies) will be set to the highest
+  value possible between the two values.
+   - c.f. https://cmake.org/cmake/help/latest/command/cmake_minimum_required.html
+* Move cmake_minimum_required position in files given warning:
+     cmake_minimum_required() should be called prior to this top-level project()
+     call.  Please see the cmake-commands(7) manual for usage documentation of
+     both commands.
+* Older versions of CMake v3.x policies are being deprecated and as of CMake v4,
+  compatibility with CMake < 3.5 has been removed, so all CMake v2 policies are
+  no longer useable.
+* FATAL_ERROR option is accepted but ignored by CMake 2.6 and higher, and so is
+  removed as it can have no effect.
+* CMake policy is not changed on CMake patch releases, so specifying a CMake version
+  beyond the minor level to the patch level is not informative or meaningful.
+---
+ CMakeLists.txt                       | 2 +-
+ cmake/test_config/CMakeLists.txt     | 2 +-
+ src/geant4/generate_geant4           | 2 +-
+ src/gtest/gtest-1.8.0/CMakeLists.txt | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index fa1f1013..0cb110df 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -1,5 +1,5 @@
++cmake_minimum_required(VERSION 3.18...4.2)
+ project(DAGMC)
+-cmake_minimum_required(VERSION 3.18)
+ enable_language(CXX)
+ 
+ # Set DAGMC version
+diff --git a/cmake/test_config/CMakeLists.txt b/cmake/test_config/CMakeLists.txt
+index d9ffa49e..c89a7f9e 100644
+--- a/cmake/test_config/CMakeLists.txt
++++ b/cmake/test_config/CMakeLists.txt
+@@ -1,5 +1,5 @@
++cmake_minimum_required(VERSION 2.8...4.2)
+ project(Test_DAGMC_config)
+-cmake_minimum_required(VERSION 2.8)
+ 
+ set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR})
+ 
+diff --git a/src/geant4/generate_geant4 b/src/geant4/generate_geant4
+index af7b3c64..91dc01fc 100755
+--- a/src/geant4/generate_geant4
++++ b/src/geant4/generate_geant4
+@@ -1296,7 +1296,7 @@ def _setup_build(dag_h5m):
+ 
+     file_contents.append('#----------------------------------------------------------------------------\n')
+     file_contents.append('# Setup the project\n')
+-    file_contents.append('cmake_minimum_required(VERSION 2.6 FATAL_ERROR)\n')
++    file_contents.append('cmake_minimum_required(VERSION 2.6...4.2)\n')
+     file_contents.append('project(N01)\n')
+     file_contents.append('\n')
+     file_contents.append('#----------------------------------------------------------------------------\n')
+diff --git a/src/gtest/gtest-1.8.0/CMakeLists.txt b/src/gtest/gtest-1.8.0/CMakeLists.txt
+index 4560e7eb..fed7fc37 100644
+--- a/src/gtest/gtest-1.8.0/CMakeLists.txt
++++ b/src/gtest/gtest-1.8.0/CMakeLists.txt
+@@ -26,8 +26,8 @@ endif()
+ # as ${gtest_SOURCE_DIR} and to the root binary directory as
+ # ${gtest_BINARY_DIR}.
+ # Language "C" is required for find_package(Threads).
++cmake_minimum_required(VERSION 2.6...4.2)
+ project(gtest CXX C)
+-cmake_minimum_required(VERSION 2.6.4)
+ 
+ # Where gtest's .h files can be found.
+ include_directories(
+-- 
+2.53.0
+
