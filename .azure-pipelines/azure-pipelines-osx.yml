@@ -68,6 +68,66 @@ jobs:
         resize_partitions: false
         store_build_artifacts: false
         tools_install_dir: ~/miniforge3
+      osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich:
+        CONFIG: osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: false
+        tools_install_dir: ~/miniforge3
+      osx_arm64_dddoubledownmpinompimpi_prefixnompi:
+        CONFIG: osx_arm64_dddoubledownmpinompimpi_prefixnompi
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: false
+        tools_install_dir: ~/miniforge3
+      osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi:
+        CONFIG: osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: false
+        tools_install_dir: ~/miniforge3
+      osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich:
+        CONFIG: osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: false
+        tools_install_dir: ~/miniforge3
+      osx_arm64_ddnodoubledownmpinompimpi_prefixnompi:
+        CONFIG: osx_arm64_ddnodoubledownmpinompimpi_prefixnompi
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: false
+        tools_install_dir: ~/miniforge3
+      osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi:
+        CONFIG: osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi
+        UPLOAD_PACKAGES: 'True'
+        VMIMAGE: macOS-15-arm64
+        build_workspace_dir: ~/miniforge3/conda-bld
+        free_disk_space: skip
+        pagefile_size: 0
+        resize_partitions: false
+        store_build_artifacts: false
+        tools_install_dir: ~/miniforge3
   timeoutInMinutes: 360
   variables: {}
 
