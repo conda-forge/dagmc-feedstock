@@ -1,0 +1,31 @@
+c_stdlib:
+- sysroot
+c_stdlib_version:
+- '2.17'
+channel_sources:
+- conda-forge
+channel_targets:
+- conda-forge main
+cxx_compiler:
+- gxx
+cxx_compiler_version:
+- '15'
+dd:
+- nodoubledown
+docker_image:
+- quay.io/condaforge/linux-anvil-aarch64:alma10
+hdf5:
+- 1.14.6
+mpi:
+- nompi
+mpi_prefix:
+- nompi
+mpich:
+- '4'
+openmpi:
+- '5'
+target_platform:
+- linux-aarch64
+zip_keys:
+- - mpi
+  - mpi_prefix

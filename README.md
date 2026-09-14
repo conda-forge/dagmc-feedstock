@@ -83,6 +83,48 @@ Current build status
                   <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi" alt="variant">
                 </a>
               </td>
+            </tr><tr>
+              <td>osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_dddoubledownmpinompimpi_prefixnompi</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_dddoubledownmpinompimpi_prefixnompi" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_ddnodoubledownmpinompimpi_prefixnompi</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_ddnodoubledownmpinompimpi_prefixnompi" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=8921&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/dagmc-feedstock?branchName=main&jobName=osx&configuration=osx%20osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi" alt="variant">
+                </a>
+              </td>
             </tr>
           </tbody>
         </table>
