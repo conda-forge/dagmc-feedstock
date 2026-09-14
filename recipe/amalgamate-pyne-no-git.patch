@@ -1,0 +1,10 @@
+--- a/src/pyne/amalgamate_pyne.sh
++++ b/src/pyne/amalgamate_pyne.sh
+@@ -18,7 +18,6 @@
+     src/source_sampling.*
+ cp pyne.cpp pyne.h $2
+ 
+-githash=`git rev-parse HEAD`
+ cd $2
+ python3 $1/remove_unsupported.py
+ mv -fv pyne.cpp.new pyne.cpp
