@@ -22,7 +22,7 @@ jobs:
       max-parallel: 50
       matrix:
         include:
-          - CONFIG: linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich
+          - CONFIG: linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -34,7 +34,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_dddoubledownmpinompimpi_prefixnompi
+          - CONFIG: linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -46,7 +46,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi
+          - CONFIG: linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -58,7 +58,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich
+          - CONFIG: linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -70,7 +70,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_ddnodoubledownmpinompimpi_prefixnompi
+          - CONFIG: linux_64_dddoubledownhdf52mpinompimpi_prefixnompi
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -82,7 +82,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi
+          - CONFIG: linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -94,7 +94,79 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-latest']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich
+          - CONFIG: linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-x86_64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-latest']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -106,7 +178,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_dddoubledownmpinompimpi_prefixnompi
+          - CONFIG: linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -118,7 +190,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi
+          - CONFIG: linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -130,7 +202,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich
+          - CONFIG: linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -142,7 +214,7 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi
+          - CONFIG: linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True
@@ -154,7 +226,79 @@ jobs:
             resize_partitions: False
             runs_on: ['ubuntu-24.04-arm']
             tools_install_dir: ~/miniforge3
-          - CONFIG: linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi
+          - CONFIG: linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi
+            DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
+            STORE_BUILD_ARTIFACTS: False
+            UPLOAD_PACKAGES: True
+            build_workspace_dir: build_artifacts
+            docker_run_args: 
+            free_disk_space: skip
+            os: ubuntu
+            pagefile_size: 0
+            resize_partitions: False
+            runs_on: ['ubuntu-24.04-arm']
+            tools_install_dir: ~/miniforge3
+          - CONFIG: linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi
             DOCKER_IMAGE: quay.io/condaforge/linux-anvil-aarch64:alma10
             STORE_BUILD_ARTIFACTS: False
             UPLOAD_PACKAGES: True

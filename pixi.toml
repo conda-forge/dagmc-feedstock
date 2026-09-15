@@ -37,222 +37,438 @@ description = "List contents of all packages found in rattler-build build direct
 [feature.build.tasks.build]
 cmd = "rattler-build build --recipe recipe"
 description = "Build dagmc-feedstock directly (without setup scripts), no particular variant specified"
-[feature.build.tasks."build-linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
-description = "Build dagmc-feedstock with variant linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
-description = "Debug dagmc-feedstock with variant linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownmpimpichmpi_prefixmpi_mpich"
-[feature.build.tasks."build-linux_64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownmpinompimpi_prefixnompi.yaml --target-platform linux-64"
-description = "Build dagmc-feedstock with variant linux_64_dddoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownmpinompimpi_prefixnompi.yaml --target-platform linux-64"
-description = "Debug dagmc-feedstock with variant linux_64_dddoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownmpinompimpi_prefixnompi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownmpinompimpi_prefixnompi"
-[feature.build.tasks."build-linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
-description = "Build dagmc-feedstock with variant linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
-description = "Debug dagmc-feedstock with variant linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"
-[feature.build.tasks."build-linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
-description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
-description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"
-[feature.build.tasks."build-linux_64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownmpinompimpi_prefixnompi.yaml --target-platform linux-64"
-description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownmpinompimpi_prefixnompi.yaml --target-platform linux-64"
-description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownmpinompimpi_prefixnompi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownmpinompimpi_prefixnompi"
-[feature.build.tasks."build-linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
-description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."debug-linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
-description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"
-[feature.build.tasks."build-linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
-description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
-description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownmpimpichmpi_prefixmpi_mpich"
-[feature.build.tasks."build-linux_aarch64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownmpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
-description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownmpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
-description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownmpinompimpi_prefixnompi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownmpinompimpi_prefixnompi"
-[feature.build.tasks."build-linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
-description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
-description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"
-[feature.build.tasks."build-linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
-description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
-description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"
-[feature.build.tasks."build-linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
-description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
-description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownmpinompimpi_prefixnompi"
-[feature.build.tasks."build-linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
-description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."debug-linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
-description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"
-[feature.build.tasks."build-osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
-description = "Build dagmc-feedstock with variant osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
-description = "Debug dagmc-feedstock with variant osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownmpimpichmpi_prefixmpi_mpich"
-[feature.build.tasks."build-osx_64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownmpinompimpi_prefixnompi.yaml --target-platform osx-64"
-description = "Build dagmc-feedstock with variant osx_64_dddoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownmpinompimpi_prefixnompi.yaml --target-platform osx-64"
-description = "Debug dagmc-feedstock with variant osx_64_dddoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownmpinompimpi_prefixnompi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownmpinompimpi_prefixnompi"
-[feature.build.tasks."build-osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
-description = "Build dagmc-feedstock with variant osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
-description = "Debug dagmc-feedstock with variant osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"
-[feature.build.tasks."build-osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
-description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
-description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"
-[feature.build.tasks."build-osx_64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownmpinompimpi_prefixnompi.yaml --target-platform osx-64"
-description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownmpinompimpi_prefixnompi.yaml --target-platform osx-64"
-description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownmpinompimpi_prefixnompi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownmpinompimpi_prefixnompi"
-[feature.build.tasks."build-osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
-description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."debug-osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
-description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"
-[feature.build.tasks."build-osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
-description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
-description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownmpimpichmpi_prefixmpi_mpich"
-[feature.build.tasks."build-osx_arm64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownmpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
-description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownmpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
-description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_dddoubledownmpinompimpi_prefixnompi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownmpinompimpi_prefixnompi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownmpinompimpi_prefixnompi"
-[feature.build.tasks."build-osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
-description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
-description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownmpiopenmpimpi_prefixmpi_openmpi"
-[feature.build.tasks."build-osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
-description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
-description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownmpimpichmpi_prefixmpi_mpich"
-[feature.build.tasks."build-osx_arm64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownmpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
-description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownmpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
-description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownmpinompimpi_prefixnompi directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_ddnodoubledownmpinompimpi_prefixnompi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownmpinompimpi_prefixnompi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownmpinompimpi_prefixnompi"
-[feature.build.tasks."build-osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
-description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."debug-osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
-description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
-[feature.build.tasks."inspect-osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi.yaml"
-description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownmpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"
+[feature.build.tasks."build-linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-linux_64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_dddoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_dddoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownhdf52mpinompimpi_prefixnompi"
+[feature.build.tasks."build-linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"
+[feature.build.tasks."build-linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownhdf52mpinompimpi_prefixnompi"
+[feature.build.tasks."build-linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
+description = "Build dagmc-feedstock with variant linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-64"
+description = "Debug dagmc-feedstock with variant linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"
+[feature.build.tasks."build-linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownhdf52mpinompimpi_prefixnompi"
+[feature.build.tasks."build-linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"
+[feature.build.tasks."build-linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownhdf52mpinompimpi_prefixnompi"
+[feature.build.tasks."build-linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
+description = "Build dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform linux-aarch64"
+description = "Debug dagmc-feedstock with variant linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant linux_aarch64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"
+[feature.build.tasks."build-osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-osx_64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_dddoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_dddoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownhdf52mpinompimpi_prefixnompi"
+[feature.build.tasks."build-osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"
+[feature.build.tasks."build-osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownhdf52mpinompimpi_prefixnompi"
+[feature.build.tasks."build-osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
+description = "Build dagmc-feedstock with variant osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-64"
+description = "Debug dagmc-feedstock with variant osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownhdf51.14.6mpinompimpi_prefixnompi"
+[feature.build.tasks."build-osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownhdf52mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownhdf52mpinompimpi_prefixnompi"
+[feature.build.tasks."build-osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_dddoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownhdf51.14.6mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownhdf51.14.6mpinompimpi_prefixnompi"
+[feature.build.tasks."build-osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownhdf51.14.6mpiopenmpimpi_prefixmpi_openmpi"
+[feature.build.tasks."build-osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownhdf52mpimpichmpi_prefixmpi_mpich"
+[feature.build.tasks."build-osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownhdf52mpinompimpi_prefixnompi"
+[feature.build.tasks."build-osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build build --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
+description = "Build dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."debug-osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "rattler-build debug setup --recipe recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml --target-platform osx-arm64"
+description = "Debug dagmc-feedstock with variant osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi directly (without setup scripts)"
+[feature.build.tasks."inspect-osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"]
+cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi.yaml"
+description = "List contents of dagmc-feedstock packages built for variant osx_arm64_ddnodoubledownhdf52mpiopenmpimpi_prefixmpi_openmpi"
 
 [environments]
 build = ["build"]
