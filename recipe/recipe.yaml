@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   version: "3.2.4"
-  build_number: 7
+  build_number: 8
 
 package:
   name: "dagmc"
@@ -36,9 +36,10 @@ build:
   # `dagmc * nompi_*` for no mpi
 
   # prioritize nompi variant
-  # Need to set build_number both times
+  # rattler-build exposes the resolved build.number as `build_number` when
+  # rendering build.string, so only apply the offset here
   number: ${{ build_number | int + 100 if mpi == "nompi" else build_number }}
-  string: ${{ mpi_prefix }}_${{ dd }}_h${{ hash }}_${{ build_number | int + 100 if mpi == "nompi" else build_number }}
+  string: ${{ mpi_prefix }}_${{ dd }}_h${{ hash }}_${{ build_number }}
   variant:
     # prefer 'nompi' over other variants
     down_prioritize_variant: ${{ 0 if mpi == "nompi" else 1 }}
