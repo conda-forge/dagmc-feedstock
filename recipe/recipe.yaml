@@ -87,6 +87,7 @@ outputs:
         - if: mpi != "nompi"
           then: ${{ mpi }}
       run_exports:
+        - ${{ pin_subpackage("dagmc", upper_bound="x.x") }}
         # constrain downstream packages to the same mpi variant
         - if: mpi != "nompi"
           then: dagmc * ${{ mpi_prefix }}_*
