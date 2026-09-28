@@ -29,7 +29,6 @@ source:
     target_directory: src/pyne/pyne
 
 build:
-  # Need to set build_number both times
   number: ${{ build_number | int + 100 if mpi == "nompi" else build_number }}
   variant:
     # prefer 'nompi' over other variants
@@ -75,6 +74,7 @@ outputs:
         - hdf5 [build=${{ mpi_prefix }}_*]
         # DAGMC does not need TempestRemap
         # c.f. https://github.com/conda-forge/dagmc-feedstock/issues/41
+        - moab
         - moab [build=${{ mpi_prefix }}_notempest_*]
         - if: mpi != "nompi"
           then: ${{ mpi }}
