@@ -223,6 +223,9 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-dagmc-green.svg)](https://anaconda.org/conda-forge/dagmc) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagmc.svg)](https://anaconda.org/conda-forge/dagmc) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagmc.svg)](https://anaconda.org/conda-forge/dagmc) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagmc.svg)](https://anaconda.org/conda-forge/dagmc) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-dagmc--mpich-green.svg)](https://anaconda.org/conda-forge/dagmc-mpich) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagmc-mpich.svg)](https://anaconda.org/conda-forge/dagmc-mpich) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagmc-mpich.svg)](https://anaconda.org/conda-forge/dagmc-mpich) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagmc-mpich.svg)](https://anaconda.org/conda-forge/dagmc-mpich) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-dagmc--nompi-green.svg)](https://anaconda.org/conda-forge/dagmc-nompi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagmc-nompi.svg)](https://anaconda.org/conda-forge/dagmc-nompi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagmc-nompi.svg)](https://anaconda.org/conda-forge/dagmc-nompi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagmc-nompi.svg)](https://anaconda.org/conda-forge/dagmc-nompi) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-dagmc--openmpi-green.svg)](https://anaconda.org/conda-forge/dagmc-openmpi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/dagmc-openmpi.svg)](https://anaconda.org/conda-forge/dagmc-openmpi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/dagmc-openmpi.svg)](https://anaconda.org/conda-forge/dagmc-openmpi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/dagmc-openmpi.svg)](https://anaconda.org/conda-forge/dagmc-openmpi) |
 
 Installing dagmc
 ================
@@ -241,7 +244,7 @@ How to use
 <summary>With conda</summary>
 
 ```
-conda install dagmc
+conda install dagmc dagmc-mpich dagmc-nompi dagmc-openmpi
 ```
 
 </details>
@@ -250,7 +253,7 @@ conda install dagmc
 <summary>With mamba</summary>
 
 ```
-mamba install dagmc
+mamba install dagmc dagmc-mpich dagmc-nompi dagmc-openmpi
 ```
 
 </details>
@@ -260,9 +263,9 @@ mamba install dagmc
 
 ```
 # for adding to your local project
-pixi add dagmc
+pixi add dagmc dagmc-mpich dagmc-nompi dagmc-openmpi
 # for installing globally
-pixi global install dagmc
+pixi global install dagmc dagmc-mpich dagmc-nompi dagmc-openmpi
 ```
 
 </details>
